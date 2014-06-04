@@ -1,0 +1,7 @@
+2014-06-03 21:14:40.848000 Start
+2014-06-03 21:14:40.848000 Making concept dictionary
+2014-06-03 21:15:00.109000 Concept dictionary has  18329 entries
+2014-06-03 21:15:00.110000 Making date dictionary
+2014-06-03 21:15:19.580000 Date dictionary has  18329 entries
+Paper 24303330 added at http://vivo.ufl.edu/individual/n1554796136
+2014-06-03 21:15:26.518000 Finish
