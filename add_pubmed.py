@@ -7,10 +7,13 @@
     Version 0.1 MC 2014-05-19
     --  Process all elements.  Still needs author finding
     Version 0.2 MC 2014-06-03
-    -- Complete version with new author finding logic and update_pubmed
+    --  Complete version with new author finding logic and update_pubmed
+    Version 0.3 MC 2014-06-04
+    --  Handle Unicode, list actions to be taken for each author, run
+        from command line.  Two complete examples. Improve logging
 
     To Do
-    --  More testing of author finding.  Check XML.  Load to staging.
+    --  Load to staging.
     --  Can PubMed tell you who is the corresponding author?  If so,
         document_from_pubmed needs improvement
 """
@@ -18,9 +21,8 @@
 __author__ = "Michael Conlon"
 __copyright__ = "Copyright 2014, University of Florida"
 __license__ = "BSD 3-Clause license"
-__version__ = "0.2"
+__version__ = "0.3"
 
-from datetime import datetime
 from vivotools import rdf_header
 from vivotools import rdf_footer
 from vivotools import update_pubmed
@@ -36,6 +38,10 @@ from vivotools import assert_data_property
 from vivotools import untag_predicate
 from vivotools import vivo_sparql_query
 import vivotools as vt
+from datetime import datetime
+import sys
+import os
+import codecs
 from Bio import Entrez
 from time import sleep
 
@@ -228,18 +234,25 @@ def author_case_query(qn, author):
 
 def find_author(author):
     """
-    Given an author object with name parts, return an
-    author_uri from VIVO.  
+    Given an author object with name parts, return the smallest set of uris
+    that match the author in VIVO.  Could be an empty set, could be a singleton,
+    could be a clutch requiring further disambiguation
     """
     case = author_case(author)
     queries = author_queries(case, author)
-    author_uri = None
+    author_uri_set = set([])
     for query in queries:
-        result = vivo_sparql_query(query)
-        if len(result['results']['bindings']) == 1:
-            author_uri = result['results']['bindings'][0]['uri']['value']
+        result = vivo_sparql_query(query.encode('utf-8'))
+        count = len(result['results']['bindings'])
+        if count == 1:
+            author_uri_set = set([result['results']['bindings'][0]\
+                                  ['uri']['value']])
             break
-    return author_uri
+        elif count > 1 and count < len(author_uri_set):
+            author_uri_set = set([])
+            for row in result['results']['bindings']:
+                author_uri_set.add(row['uri']['value'])
+    return author_uri_set
 
 def make_authorship_rdf(pub_uri, author_uri, rank, corresponding=False):
     """
@@ -394,10 +407,17 @@ def get_pubmed(pmid):
 
     pub['authorship_uris'] = []
     for key,author in sorted(pub['authors'].items(),key=lambda x:x[0]):
-        author_uri = find_author(author)
-        if author_uri is None:
+        author_uri_set = find_author(author)
+        if len(author_uri_set) == 0:
             [add, author_uri] = make_author_rdf(author)
             ardf = ardf + add
+            print pmid, "Add", author, "at", author_uri
+        elif len(author_uri_set) == 1:
+            author_uri = list(author_uri_set)[0]
+            print pmid, "Found", author, author_uri
+        else:
+            author_uri = list(author_uri_set)[0]
+            print pmid, "Disambiguate", author, "from", author_uri_set
         [add, authorship_uri] = make_authorship_rdf(pub['pub_uri'], author_uri,
                                                     key, corresponding=False)
         pub['authorship_uris'].append(authorship_uri)
@@ -410,18 +430,35 @@ def get_pubmed(pmid):
 srdf = rdf_header()
 ardf = rdf_header()
 
+if len(sys.argv) > 1:
+    path_name = str(sys.argv[1])
+else:
+    path_name = "pubs.txt"
+file_name, file_extension = os.path.splitext(path_name)
 
-log_file = open("add_pubs_log.txt", "w")
-exc_file = open("add_pubs_exc.txt", "w")
+add_file = codecs.open(file_name+"_add.rdf", mode='w', encoding='ascii',
+                       errors='xmlcharrefreplace')
+sub_file = codecs.open(file_name+"_sub.rdf", mode='w', encoding='ascii',
+                       errors='xmlcharrefreplace')
+log_file = codecs.open(file_name+"_log.txt", mode='w', encoding='ascii',
+                       errors='xmlcharrefreplace')
+exc_file = codecs.open(file_name+"_exc.txt", mode='w', encoding='ascii',
+                       errors='xmlcharrefreplace')
+
 print >>log_file, datetime.now(), "Start"
-print >>log_file, datetime.now(),"Making concept dictionary"
+print >>log_file, datetime.now(), "Grant Ingest Version", __version__
+print >>log_file, datetime.now(), "VIVO Tools Version", vt.__version__
+print >>log_file, datetime.now(), "Making concept dictionary"
 make_concept_dictionary()
-print >>log_file, datetime.now(),"Concept dictionary has ", len(vt.concept_dictionary),\
-                                          "entries"
-print >>log_file, datetime.now(),"Making date dictionary"
+print >>log_file, datetime.now(), "Concept dictionary has", \
+        len(vt.concept_dictionary), "entries"
+print >>log_file, datetime.now(), "Making date dictionary"
 date_dictionary = make_concept_dictionary()
-print >>log_file, datetime.now(),"Date dictionary has ", len(date_dictionary), "entries"
-add_pubs = read_csv('add_pubmed.txt')
+print >>log_file, datetime.now(), "Date dictionary has", \
+        len(date_dictionary), "entries"
+print >>log_file, datetime.now(), "Reading pub list"
+add_pubs = read_csv(path_name)
+print >>log_file, datetime.now(), "Pub list has", len(add_pubs), "entries"
 
 for n, row in add_pubs.items():
 
@@ -466,12 +503,10 @@ for n, row in add_pubs.items():
 
     print >>log_file, "Paper", pmid, "added at", pub_uri
 
-add_file = open("add.rdf","w")
 ardf = ardf + rdf_footer()
 print >>add_file,ardf
 add_file.close()
 
-sub_file = open("sub.rdf","w")
 srdf = srdf + rdf_footer()
 print >>sub_file,srdf
 sub_file.close()
