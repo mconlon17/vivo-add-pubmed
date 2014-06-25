@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+    xmlns:rdf     = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs    = "http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd     = "http://www.w3.org/2001/XMLSchema#"
+    xmlns:owl     = "http://www.w3.org/2002/07/owl#"
+    xmlns:swrl    = "http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb   = "http://www.w3.org/2003/11/swrlb#"
+    xmlns:vitro1  = "http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+    xmlns:bibo    = "http://purl.org/ontology/bibo/"
+    xmlns:c4o     = "http://purl.org/spar/c4o/"
+    xmlns:dcelem  = "http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms = "http://purl.org/dc/terms/"
+    xmlns:event   = "http://purl.org/NET/c4dm/event.owl#"
+    xmlns:foaf    = "http://xmlns.com/foaf/0.1/"
+    xmlns:fabio   = "http://purl.org/spar/fabio/"
+    xmlns:geo     = "http://aims.fao.org/aos/geopolitical.owl#"
+    xmlns:pvs     = "http://vivoweb.org/ontology/provenance-support#"
+    xmlns:ero     = "http://purl.obolibrary.org/obo/"
+    xmlns:scires  = "http://vivoweb.org/ontology/scientific-research#"
+    xmlns:skos    = "http://www.w3.org/2004/02/skos/core#"
+    xmlns:ufVivo  = "http://vivo.ufl.edu/ontology/vivo-ufl/"
+    xmlns:vitro2  = "http://vitro.mannlib.cornell.edu/ns/vitro/public#"
+    xmlns:core    = "http://vivoweb.org/ontology/core#"
+    xmlns:vivo    = "http://vivoweb.org/ontology/core#">
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n717323903">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n717323903">
+        <rdf:type rdf:resource="http://purl.org/ontology/bibo/Journal"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n717323903">
+        <rdfs:label>Pharmacogenetics and genomics</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n717323903">
+        <bibo:issn>1744-6880</bibo:issn>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n6156058262">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#DateTimeValue"/>
+        <core:dateTimePrecision rdf:resource="http://vivoweb.org/ontology/core#yearMonthDayPrecision"/>
+        <core:dateTime>2014-06-20T00:00:00</core:dateTime>
+    </rdf:Description>
+        <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n8241658940">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n8241658940">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#Authorship"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n8241658940">
+        <vivo:linkedAuthor rdf:resource="http://vivo.ufl.edu/individual/n107290"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n8241658940">
+        <vivo:linkedInformationResource rdf:resource="http://vivo.ufl.edu/individual/n2020479236"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n8241658940">
+        <vivo:authorRank>1</vivo:authorRank>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n8241658940">
+        <vivo:isCorrespondingAuthor>false</vivo:isCorrespondingAuthor>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2758394479">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2758394479">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#Authorship"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2758394479">
+        <vivo:linkedAuthor rdf:resource="http://vivo.ufl.edu/individual/n6446"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2758394479">
+        <vivo:linkedInformationResource rdf:resource="http://vivo.ufl.edu/individual/n2020479236"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2758394479">
+        <vivo:authorRank>2</vivo:authorRank>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2758394479">
+        <vivo:isCorrespondingAuthor>false</vivo:isCorrespondingAuthor>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n9946716459">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n9946716459">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n9946716459">
+        <rdfs:label>Wang, Xinwen</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n9946716459">
+        <foaf:lastName>Wang</foaf:lastName>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n9946716459">
+        <foaf:firstName>Xinwen</foaf:firstName>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n5029352353">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n5029352353">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#Authorship"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n5029352353">
+        <vivo:linkedAuthor rdf:resource="http://vivo.ufl.edu/individual/n9946716459"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n5029352353">
+        <vivo:linkedInformationResource rdf:resource="http://vivo.ufl.edu/individual/n2020479236"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n5029352353">
+        <vivo:authorRank>3</vivo:authorRank>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n5029352353">
+        <vivo:isCorrespondingAuthor>false</vivo:isCorrespondingAuthor>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n1990097233">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n1990097233">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n1990097233">
+        <rdfs:label>El Rouby, Nihal</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n1990097233">
+        <foaf:lastName>El Rouby</foaf:lastName>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n1990097233">
+        <foaf:firstName>Nihal</foaf:firstName>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n9819018598">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n9819018598">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#Authorship"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n9819018598">
+        <vivo:linkedAuthor rdf:resource="http://vivo.ufl.edu/individual/n1990097233"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n9819018598">
+        <vivo:linkedInformationResource rdf:resource="http://vivo.ufl.edu/individual/n2020479236"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n9819018598">
+        <vivo:authorRank>4</vivo:authorRank>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n9819018598">
+        <vivo:isCorrespondingAuthor>false</vivo:isCorrespondingAuthor>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n4492973542">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n4492973542">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#Authorship"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n4492973542">
+        <vivo:linkedAuthor rdf:resource="http://vivo.ufl.edu/individual/n32480"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n4492973542">
+        <vivo:linkedInformationResource rdf:resource="http://vivo.ufl.edu/individual/n2020479236"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n4492973542">
+        <vivo:authorRank>5</vivo:authorRank>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n4492973542">
+        <vivo:isCorrespondingAuthor>false</vivo:isCorrespondingAuthor>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n6022359294">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n6022359294">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#Authorship"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n6022359294">
+        <vivo:linkedAuthor rdf:resource="http://vivo.ufl.edu/individual/n22385"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n6022359294">
+        <vivo:linkedInformationResource rdf:resource="http://vivo.ufl.edu/individual/n2020479236"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n6022359294">
+        <vivo:authorRank>6</vivo:authorRank>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n6022359294">
+        <vivo:isCorrespondingAuthor>false</vivo:isCorrespondingAuthor>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n1052510954">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n1052510954">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#Authorship"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n1052510954">
+        <vivo:linkedAuthor rdf:resource="http://vivo.ufl.edu/individual/n66269"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n1052510954">
+        <vivo:linkedInformationResource rdf:resource="http://vivo.ufl.edu/individual/n2020479236"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n1052510954">
+        <vivo:authorRank>7</vivo:authorRank>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n1052510954">
+        <vivo:isCorrespondingAuthor>false</vivo:isCorrespondingAuthor>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <rdf:type rdf:resource="http://purl.org/ontology/bibo/AcademicArticle"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <ufVivo:dateHarvested>2014-06-25 17:34:48.408000</ufVivo:dateHarvested>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <bibo:doi>10.1097/FPC.0000000000000068</bibo:doi>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <ufVivo:harvestedBy>Python PubMed Add 0.3</ufVivo:harvestedBy>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <bibo:pageEnd></bibo:pageEnd>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <bibo:pageStart></bibo:pageStart>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <bibo:pmid>24945780</bibo:pmid>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <rdfs:label>The influence of the CYP2C19*10 allele on clopidogrel activation and CYP2C19*2 genotyping.</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <vivo:dateTimeValue rdf:resource="http://vivo.ufl.edu/individual/n6156058262"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <vivo:hasPublicationVenue rdf:resource="http://vivo.ufl.edu/individual/n717323903"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <vivo:informationResourceInAuthorship rdf:resource="http://vivo.ufl.edu/individual/n8241658940"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <vivo:informationResourceInAuthorship rdf:resource="http://vivo.ufl.edu/individual/n2758394479"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <vivo:informationResourceInAuthorship rdf:resource="http://vivo.ufl.edu/individual/n5029352353"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <vivo:informationResourceInAuthorship rdf:resource="http://vivo.ufl.edu/individual/n9819018598"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <vivo:informationResourceInAuthorship rdf:resource="http://vivo.ufl.edu/individual/n4492973542"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <vivo:informationResourceInAuthorship rdf:resource="http://vivo.ufl.edu/individual/n6022359294"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <vivo:informationResourceInAuthorship rdf:resource="http://vivo.ufl.edu/individual/n1052510954"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://vivo.ufl.edu/individual/n2020479236">
+        <bibo:abstract>The polymorphic hepatic enzyme CYP2C19 catalyzes the metabolism of clinically important drugs such as clopidogrel, proton-pump inhibitors, and others and clinical pharmacogenetic testing for clopidogrel is increasingly common. The CYP2C19*10 single-nucleotide polymorphism (SNP) is located 1&#8201;bp upstream the CYP2C19*2 SNP. Despite the low frequency of the CYP2C19*10 allele, its impact on metabolism of CYP2C19 substrates and CYP2C19*2 genotyping makes it an important SNP to consider for pharmacogenetic testing of CYP2C19. However, the effect of the CYP2C19*10 allele on clopidogrel metabolism has not been explored to date.</bibo:abstract>
+    </rdf:Description>
+
+</rdf:RDF>
+

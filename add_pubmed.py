@@ -368,10 +368,13 @@ def make_pub_rdf(pub):
      
     return [ardf, pub_uri]
 
-def get_pubmed(pmid):
+def get_pubmed(pmid, author_uris = None):
     """
     Given a pubmid identifer, return a structure containing the elements
-    of the publication of interest to VIVO
+    of the publication of interest to VIVO. Optionally, provide a set of
+    author_uris for use in disambiguation.  When find_author returns a
+    set of size > 1, the author_uris will be examined for matches to
+    assist with disambiguation.
     """
     ardf = ""
     record = get_entrez_record(pmid)
@@ -416,8 +419,21 @@ def get_pubmed(pmid):
             author_uri = list(author_uri_set)[0]
             print pmid, "Found", author, author_uri
         else:
-            author_uri = list(author_uri_set)[0]
-            print pmid, "Disambiguate", author, "from", author_uri_set
+            if author_uris is None:
+                author_uri = list(author_uri_set)[0]
+                print pmid, "Disambiguate", author, "from", author_uri_set
+            else:
+                possible_uri_set = author_uri_set.intersection(author_uris)
+                if len(possible_uri_set) == 1:
+                    author_uri = list(possible_uri_set)[0]
+                else:
+                    author_uri = list(possible_uri_set)[0]
+                    print pmid, "Disambiguate", author, "from", possible_uri_set
+            print "Disambiguate:"
+            print "  Possible authors in VIVO", author_uri_set
+            print "  Possible authors in Source", author_uris
+            print "  Selected author", author_uri
+                    
         [add, authorship_uri] = make_authorship_rdf(pub['pub_uri'], author_uri,
                                                     key, corresponding=False)
         pub['authorship_uris'].append(authorship_uri)
@@ -503,7 +519,7 @@ for n, row in add_pubs.items():
 #   get the paper from pubmed
 
     try:
-        [add, pub] = get_pubmed(pmid)
+        [add, pub] = get_pubmed(pmid, row['author_uris'])
         ardf = ardf + add
     except NotFound:
         print >>exc_file, "PubMed ID", pmid, "not found in PubMed"
