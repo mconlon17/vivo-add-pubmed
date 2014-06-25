@@ -425,6 +425,35 @@ def get_pubmed(pmid):
     
     return [ardf, pub]
 
+def prepare_pubs(path_name):
+    """
+    Read the list of pubs to add.  For each, process the uifd field into a
+    set of VIVO uris.  The ufid field is optionally a semi-colon delimited
+    list of either ufids or uris.  The result will be a set of uris.  These
+    uris are compared to uris in disambiguation sets to select authors.
+    """
+    add_pubs = read_csv(path_name)
+    for key,row in add_pubs.items():
+        row['author_uris'] = set([])
+        ids = row['ufid'].split(';')
+        print "ids=", ids
+        for id in ids:
+            print "Processing id=", id
+            if id[0] in ['0','1','2','3','4','5','6','7','8','9']:
+                author_uri = find_vivo_uri('ufVivo:ufid', id)
+                if author_uri is None:
+                    print >>exc_file, id, "UFID not found in VIVO"
+                    continue
+                else:
+                    row['author_uris'].add(author_uri)
+            elif id[0] == 'h':
+                row['author_uris'].add(id)
+            else:
+                print >>exc_file, row['ufid'], "Unknown identifier in UFID"
+            print id, row
+        add_pubs[key] = row
+    return add_pubs
+
 #  Start Here
 
 srdf = rdf_header()
@@ -457,7 +486,7 @@ date_dictionary = make_concept_dictionary()
 print >>log_file, datetime.now(), "Date dictionary has", \
         len(date_dictionary), "entries"
 print >>log_file, datetime.now(), "Reading pub list"
-add_pubs = read_csv(path_name)
+add_pubs = prepare_pubs(path_name)
 print >>log_file, datetime.now(), "Pub list has", len(add_pubs), "entries"
 
 for n, row in add_pubs.items():
@@ -465,10 +494,7 @@ for n, row in add_pubs.items():
 #   Check the request to add
 
     pmid = row['pmid']
-    author_uri = find_vivo_uri('ufVivo:ufid', row['ufid'])
-    if author_uri is None:
-        print >>exc_file, row['ufid'], "UFID not found in VIVO"
-        continue
+
     pub_uri = find_vivo_uri('bibo:pmid', pmid)
     if pub_uri is not None:
         print >>exc_file, "PubMed ID", pmid, "found in VIVO at", pub_uri
