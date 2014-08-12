@@ -96,15 +96,15 @@ def author_case(author):
     Case 5 last name, first name, middle initial
     Case 6 last name, first name, middle name
     """
-    if 'first' in author:
+    if 'first' in author and author['first'] is not None:
         fn = author['first']
     else:
         fn = ''
-    if 'middle' in author:
+    if 'middle' in author and author['middle'] is not None:
         mn = author['middle']
     else:
         mn = ''
-    if 'last' in author:
+    if 'last' in author and author['last'] is not None:
         ln = author['last']
     else:
         ln = ''
@@ -311,7 +311,7 @@ def make_author_rdf(author):
         untag_predicate("foaf:Person"))
     ardf = ardf + add
     name = author['last'] + ', ' + author['first']
-    if len(author['middle']) > 0:
+    if author.get('middle', None) is not None and len(author['middle']) > 0:
         name = name + ' ' + author['middle']
         add = assert_data_property(author_uri, "bibo:middleName",
                                    author['middle'])
@@ -409,8 +409,14 @@ def get_pubmed(pmid, author_uris = None):
 #   Turn each author into a URI reference to an authorship
 
     pub['authorship_uris'] = []
-    for key,author in sorted(pub['authors'].items(),key=lambda x:x[0]):
-        author_uri_set = find_author(author)
+    for key, author in sorted(pub['authors'].items(),key=lambda x:x[0]):
+        try:
+            author_uri_set = find_author(author)
+        except:
+            print "No last name for author", author
+            print "Pub\n", pub
+            print "Record\n", record
+            continue
         if len(author_uri_set) == 0:
             [add, author_uri] = make_author_rdf(author)
             ardf = ardf + add
@@ -491,7 +497,7 @@ exc_file = codecs.open(file_name+"_exc.txt", mode='w', encoding='ascii',
                        errors='xmlcharrefreplace')
 
 print >>log_file, datetime.now(), "Start"
-print >>log_file, datetime.now(), "Grant Ingest Version", __version__
+print >>log_file, datetime.now(), "Add PubMed Version", __version__
 print >>log_file, datetime.now(), "VIVO Tools Version", vt.__version__
 print >>log_file, datetime.now(), "Making concept dictionary"
 make_concept_dictionary()
@@ -556,5 +562,4 @@ sub_file.close()
 print >>log_file, datetime.now(), "Finish"
 log_file.close()
 exc_file.close()
-
 
