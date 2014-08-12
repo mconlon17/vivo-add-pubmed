@@ -1,0 +1,15 @@
+2014-08-12 09:16:21.515000 Start
+2014-08-12 09:16:21.515000 Grant Ingest Version 0.3
+2014-08-12 09:16:21.515000 VIVO Tools Version 1.60
+2014-08-12 09:16:21.515000 Making concept dictionary
+2014-08-12 09:16:42.813000 Concept dictionary has 18366 entries
+2014-08-12 09:16:42.813000 Making date dictionary
+2014-08-12 09:16:59.489000 Date dictionary has 18366 entries
+2014-08-12 09:16:59.489000 Reading pub list
+2014-08-12 09:16:59.830000 Pub list has 47 entries
+Paper 10566365 added at http://vivo.ufl.edu/individual/n6825878237
+Paper 10566506 added at http://vivo.ufl.edu/individual/n3679185159
+Paper 10890701 added at http://vivo.ufl.edu/individual/n3923785694
+Paper 11642147 added at http://vivo.ufl.edu/individual/n382971092
+Paper 11642148 added at http://vivo.ufl.edu/individual/n449911673
+Paper 12807802 added at http://vivo.ufl.edu/individual/n5275838566
