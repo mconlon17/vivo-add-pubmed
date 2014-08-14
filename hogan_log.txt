@@ -1,56 +1,56 @@
-2014-08-12 14:41:49.209000 Start
-2014-08-12 14:41:49.209000 Add PubMed Version 0.3
-2014-08-12 14:41:49.209000 VIVO Tools Version 1.61
-2014-08-12 14:41:49.209000 Making concept dictionary
-2014-08-12 14:42:12.798000 Concept dictionary has 18366 entries
-2014-08-12 14:42:12.798000 Making date dictionary
-2014-08-12 14:42:37.468000 Date dictionary has 18366 entries
-2014-08-12 14:42:37.468000 Reading pub list
-2014-08-12 14:42:37.596000 Pub list has 47 entries
-Paper 10566365 added at http://vivo.ufl.edu/individual/n1493708455
-Paper 10566506 added at http://vivo.ufl.edu/individual/n9194412112
-Paper 10890701 added at http://vivo.ufl.edu/individual/n2081448112
-Paper 11642147 added at http://vivo.ufl.edu/individual/n312380130
-Paper 11642148 added at http://vivo.ufl.edu/individual/n2417252172
-Paper 12807802 added at http://vivo.ufl.edu/individual/n7915997103
-Paper 12925542 added at http://vivo.ufl.edu/individual/n3496399180
-Paper 14728165 added at http://vivo.ufl.edu/individual/n1519602546
-Paper 14728186 added at http://vivo.ufl.edu/individual/n6921199879
-Paper 14728205 added at http://vivo.ufl.edu/individual/n3330432255
-Paper 14728273 added at http://vivo.ufl.edu/individual/n9853926617
-Paper 15361003 added at http://vivo.ufl.edu/individual/n4666978438
-Paper 15714625 added at http://vivo.ufl.edu/individual/n7861380884
-Paper 15714643 added at http://vivo.ufl.edu/individual/n7017908045
-Paper 15797000 added at http://vivo.ufl.edu/individual/n604387255
-Paper 16177695 added at http://vivo.ufl.edu/individual/n1228141223
-Paper 16177698 added at http://vivo.ufl.edu/individual/n6164479321
-Paper 16779055 added at http://vivo.ufl.edu/individual/n7851274185
-Paper 16779080 added at http://vivo.ufl.edu/individual/n6213398885
-Paper 17509942 added at http://vivo.ufl.edu/individual/n1972134509
-Paper 17948918 added at http://vivo.ufl.edu/individual/n3454579560
-Paper 18400772 added at http://vivo.ufl.edu/individual/n9758274541
-Paper 18999243 added at http://vivo.ufl.edu/individual/n575358912
-Paper 19761570 added at http://vivo.ufl.edu/individual/n1640472201
-Paper 19891801 added at http://vivo.ufl.edu/individual/n4045847136
-Paper 20152933 added at http://vivo.ufl.edu/individual/n2810950252
-Paper 20383287 added at http://vivo.ufl.edu/individual/n6279222453
-Paper 20647054 added at http://vivo.ufl.edu/individual/n1898512649
-Paper 21346990 added at http://vivo.ufl.edu/individual/n5367764252
-Paper 21347097 added at http://vivo.ufl.edu/individual/n9047065980
-Paper 22195158 added at http://vivo.ufl.edu/individual/n9318961104
-Paper 22468732 added at http://vivo.ufl.edu/individual/n7895534509
-Paper 22981843 added at http://vivo.ufl.edu/individual/n7015078022
-Paper 23170033 added at http://vivo.ufl.edu/individual/n5471194493
-Paper 24103726 added at http://vivo.ufl.edu/individual/n6272248846
-Paper 24345026 added at http://vivo.ufl.edu/individual/n2888651668
-Paper 24560679 added at http://vivo.ufl.edu/individual/n6920111503
-Paper 24778201 added at http://vivo.ufl.edu/individual/n1397390671
-Paper 8563271 added at http://vivo.ufl.edu/individual/n813026841
-Paper 8723614 added at http://vivo.ufl.edu/individual/n4881769879
-Paper 8947720 added at http://vivo.ufl.edu/individual/n5415162084
-Paper 9292840 added at http://vivo.ufl.edu/individual/n2051660326
-Paper 9357614 added at http://vivo.ufl.edu/individual/n8807052014
-Paper 9929197 added at http://vivo.ufl.edu/individual/n4134556565
-Paper 9929198 added at http://vivo.ufl.edu/individual/n4041169813
-Paper 9929293 added at http://vivo.ufl.edu/individual/n9845315013
-2014-08-12 14:47:24.243000 Finish
+2014-08-14 11:26:51.622000 Start
+2014-08-14 11:26:51.622000 Add PubMed Version 0.3
+2014-08-14 11:26:51.622000 VIVO Tools Version 1.61
+2014-08-14 11:26:51.622000 Making concept dictionary
+2014-08-14 11:27:08.787000 Concept dictionary has 18367 entries
+2014-08-14 11:27:08.787000 Making date dictionary
+2014-08-14 11:28:19.680000 Date dictionary has 7218 entries
+2014-08-14 11:28:19.680000 Reading pub list
+2014-08-14 11:28:19.818000 Pub list has 47 entries
+Paper 10566365 added at http://vivo.ufl.edu/individual/n6870884253
+Paper 10566506 added at http://vivo.ufl.edu/individual/n9874310687
+Paper 10890701 added at http://vivo.ufl.edu/individual/n1367490646
+Paper 11642147 added at http://vivo.ufl.edu/individual/n9054356880
+Paper 11642148 added at http://vivo.ufl.edu/individual/n3187993520
+Paper 12807802 added at http://vivo.ufl.edu/individual/n5268838407
+Paper 12925542 added at http://vivo.ufl.edu/individual/n5953771436
+Paper 14728165 added at http://vivo.ufl.edu/individual/n1655252830
+Paper 14728186 added at http://vivo.ufl.edu/individual/n6710620169
+Paper 14728205 added at http://vivo.ufl.edu/individual/n8304880775
+Paper 14728273 added at http://vivo.ufl.edu/individual/n8947115046
+Paper 15361003 added at http://vivo.ufl.edu/individual/n2488113353
+Paper 15714625 added at http://vivo.ufl.edu/individual/n1802576034
+Paper 15714643 added at http://vivo.ufl.edu/individual/n5934168836
+Paper 15797000 added at http://vivo.ufl.edu/individual/n8460018209
+Paper 16177695 added at http://vivo.ufl.edu/individual/n5678940061
+Paper 16177698 added at http://vivo.ufl.edu/individual/n2378742009
+Paper 16779055 added at http://vivo.ufl.edu/individual/n6098941696
+Paper 16779080 added at http://vivo.ufl.edu/individual/n7444638417
+Paper 17509942 added at http://vivo.ufl.edu/individual/n8416922673
+Paper 17948918 added at http://vivo.ufl.edu/individual/n3215066788
+Paper 18400772 added at http://vivo.ufl.edu/individual/n2917924753
+Paper 18999243 added at http://vivo.ufl.edu/individual/n2668843563
+Paper 19761570 added at http://vivo.ufl.edu/individual/n6643498866
+Paper 19891801 added at http://vivo.ufl.edu/individual/n1056565760
+Paper 20152933 added at http://vivo.ufl.edu/individual/n544321995
+Paper 20383287 added at http://vivo.ufl.edu/individual/n1967003897
+Paper 20647054 added at http://vivo.ufl.edu/individual/n7281586726
+Paper 21346990 added at http://vivo.ufl.edu/individual/n5714276865
+Paper 21347097 added at http://vivo.ufl.edu/individual/n8693938497
+Paper 22195158 added at http://vivo.ufl.edu/individual/n342445447
+Paper 22468732 added at http://vivo.ufl.edu/individual/n4899835726
+Paper 22981843 added at http://vivo.ufl.edu/individual/n6995118648
+Paper 23170033 added at http://vivo.ufl.edu/individual/n8912021613
+Paper 24103726 added at http://vivo.ufl.edu/individual/n812517573
+Paper 24345026 added at http://vivo.ufl.edu/individual/n8224486991
+Paper 24560679 added at http://vivo.ufl.edu/individual/n9756817854
+Paper 24778201 added at http://vivo.ufl.edu/individual/n6714433039
+Paper 8563271 added at http://vivo.ufl.edu/individual/n7715192837
+Paper 8723614 added at http://vivo.ufl.edu/individual/n426419444
+Paper 8947720 added at http://vivo.ufl.edu/individual/n9425871267
+Paper 9292840 added at http://vivo.ufl.edu/individual/n4890466579
+Paper 9357614 added at http://vivo.ufl.edu/individual/n6328415155
+Paper 9929197 added at http://vivo.ufl.edu/individual/n4408127159
+Paper 9929198 added at http://vivo.ufl.edu/individual/n6950753252
+Paper 9929293 added at http://vivo.ufl.edu/individual/n8591139387
+2014-08-14 11:31:43.110000 Finish

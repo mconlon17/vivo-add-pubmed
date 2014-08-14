@@ -504,7 +504,7 @@ make_concept_dictionary()
 print >>log_file, datetime.now(), "Concept dictionary has", \
         len(vt.concept_dictionary), "entries"
 print >>log_file, datetime.now(), "Making date dictionary"
-date_dictionary = make_concept_dictionary()
+date_dictionary = make_date_dictionary()
 print >>log_file, datetime.now(), "Date dictionary has", \
         len(date_dictionary), "entries"
 print >>log_file, datetime.now(), "Reading pub list"
