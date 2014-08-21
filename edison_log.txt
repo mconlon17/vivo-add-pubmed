@@ -1,0 +1,11 @@
+2014-08-21 15:00:13.931497 Start
+2014-08-21 15:00:13.931547 Add PubMed Version 0.3
+2014-08-21 15:00:13.931564 VIVO Tools Version 1.62
+2014-08-21 15:00:13.931578 Making concept dictionary
+2014-08-21 15:00:34.341517 Concept dictionary has 18375 entries
+2014-08-21 15:00:34.341584 Making date dictionary
+2014-08-21 15:01:38.326975 Date dictionary has 7221 entries
+2014-08-21 15:01:38.327037 Reading pub list
+2014-08-21 15:01:38.415981 Pub list has 1 entries
+Paper 25140385 added at http://vivo.ufl.edu/individual/n7258263777
+2014-08-21 15:01:43.299131 Finish

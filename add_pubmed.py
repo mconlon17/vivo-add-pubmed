@@ -449,19 +449,19 @@ def get_pubmed(pmid, author_uris = None):
 
 def prepare_pubs(path_name):
     """
-    Read the list of pubs to add.  For each, process the uifd field into a
+    Read the list of pubs to add.  For each, process the ufid field into a
     set of VIVO uris.  The ufid field is optionally a semi-colon delimited
     list of either ufids or uris.  The result will be a set of uris.  These
     uris are compared to uris in disambiguation sets to select authors.
     """
     add_pubs = read_csv(path_name)
-    for key,row in add_pubs.items():
+    for key, row in add_pubs.items():
         row['author_uris'] = set([])
         ids = row['ufid'].split(';')
         print "ids=", ids
         for id in ids:
             print "Processing id=", id
-            if id[0] in ['0','1','2','3','4','5','6','7','8','9']:
+            if id[0] in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
                 author_uri = find_vivo_uri('ufVivo:ufid', id)
                 if author_uri is None:
                     print >>exc_file, id, "UFID not found in VIVO"
